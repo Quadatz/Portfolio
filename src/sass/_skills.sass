@@ -1,0 +1,58 @@
+.skills
+    padding-top: 120px
+    &__header
+        position: relative
+        text-align: center
+        @include before_circle
+        &::before
+            left: 50%
+            transform: translateX(-50%)
+    &__subheader
+        text-align: center
+    &__wrapper
+        display: grid
+        grid-template: repeat(2, 270px) / repeat(4, 270px)
+        padding-bottom: 120px
+        gap: 13px
+    &-item
+        padding: 30px
+        border: 1px solid black
+        &_img
+            height: 70px
+        &_name
+            margin: 15px 0 10px 0
+            font-weight: bold
+            font-size: 14px
+        &_text
+            font-size: 12px
+    &__sliders
+        padding-top: 120px
+        display: grid
+        grid-template:  repeat(2, 70px) / repeat(3, 350px)
+        column-gap: 45px
+        row-gap: 30px
+        &-item
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            padding-top: 8px
+            padding-left: 14px
+            &__header
+                display: flex
+                flex-direction: row
+                justify-content:  space-between
+            &_title
+                position: relative
+                @include before_circle
+                &::before
+                    left: -14px
+                    top: -8px
+    &__slider
+        height: 14px
+        width: 100%
+        border-radius: 3px
+        background-color: #E8E4DE
+        &_fill
+            height: 14px
+            border-radius: 3px
+            background-color: $main-color

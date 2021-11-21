@@ -9,3 +9,14 @@
         border-radius: 100%
         background-color: $main-color
         z-index: -1
+@mixin before_circle-small
+    &::before
+        content: ''
+        position: absolute
+        height: 15px
+        width: 15px
+        top: 12.5%
+        left: -25px
+        border-radius: 100%
+        background-color: $main-color
+        z-index: -1

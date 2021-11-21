@@ -8,3 +8,9 @@ hamburger.addEventListener('click', () => {
 closeElem.addEventListener('click', () => {
     menu.classList.remove('active');
 })
+const counters = document.querySelectorAll('.skills__sliders-item_percentage'),
+lines = document.querySelectorAll('.skills__slider_fill')
+
+counters.forEach((item, i) => {
+    lines[i].style.width = item.innerHTML;
+});

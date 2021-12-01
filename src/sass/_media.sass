@@ -1,0 +1,143 @@
+@media (max-width: 1439px)
+    .sidepanel
+        display: none
+
+@media (max-width: 1200px)
+    .container
+        max-width: 960px
+    .about
+        &__wrapper
+            grid-template-columns: 400px 540px
+            gap: 40px 50px
+        &__descr
+            width: 500px
+        &__text
+            font-size: 14px
+            width: 100%
+        &__skills
+            width: 520px
+            gap: 20px 20px
+    .skills
+        &__wrapper
+            width: 836px
+            margin: 0 auto
+            grid-template-columns: repeat(3, 270px)
+        &__sliders
+            justify-content: center
+            padding-top: 50px
+            grid-template: repeat(2, 70px)/repeat(2, 350px)
+@media (max-width: 992px)
+    .container
+        max-width: 720px
+    .title
+        font-size: 28px
+        &_fz16
+            font-size: 16px
+        &_fz14
+            font-size: 14px
+        &_fz36
+            font-size: 30px
+    .sidepanel
+        display: none
+    .promo
+        .hamburger
+            right: 20px
+        &__title
+            width: 300px
+            font-size: 26px
+            line-height: 39px
+        &__subtitle
+            width: 300px
+            font-size: 20px
+    .menu
+        &__block
+            width: 250px
+            padding-left: 20px
+    .about
+        &__wrapper
+            grid-template-columns: 300px 380px
+        &__descr
+            width: unset
+        &__skills
+            width: unset
+            grid-template-columns: 380px
+            grid-auto-rows: auto
+            &-item
+                grid-template-columns: 40px 320px 
+                column-gap: 20px
+
+        &__photo
+            img
+                height: 100%
+                object-fit: cover
+    .resume
+        &__wrapper
+            width: 500px
+            margin: 0 auto
+            grid-template-columns: 425px
+    .skills
+            &__wrapper
+                width: min-content
+                margin: 0 auto
+                justify-content: center
+                grid-template-columns: repeat(2, 270px)
+            &__sliders
+                justify-content: center
+                padding-top: 50px
+                grid-template: repeat(2, 70px)/repeat(2, 350px)
+
+@media (max-width: 768px)
+    .container
+        max-width: 540px
+    .title
+        &_fz48
+            font-size: 28px
+    .promo
+        &__title
+            line-height: 39px
+            width: 300px
+    .about
+        padding-top: 40px
+        &__wrapper
+            grid-template: 400px auto auto / 1fr
+        &__photo
+            grid-row: unset
+        &__skills
+            grid-template-columns: repeat(2, 260px)
+            width: 300px
+            &-item
+                grid-template-columns: 40px 195px
+    .skills
+        &__sliders
+            grid-template: repeat(2, 70px)/repeat(1, 350px)
+@media (max-width: 576px)
+    .container
+        max-width: 100%
+    .promo
+        &__buttons
+            margin-top: 30px
+    .about
+        &__name
+            font-size: 24px
+        &__wrapper
+            grid-template: 340px auto auto / 1fr
+        &__skills
+            grid-template-columns: 1fr
+        &__photo
+            width: 100%
+        &__descr
+            width: 100%
+    .resume
+        padding-top: 50px
+        &__wrapper
+            width: 300px
+            padding: 10px
+            padding-top: 40px
+            grid-template-columns: 290px
+    .skills
+        &__wrapper
+            grid-template-columns: repeat(1, 270px)
+        &__sliders
+            grid-template: repeat(2, 70px)/repeat(1, 300px)
+
+

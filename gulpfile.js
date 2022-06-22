@@ -6,14 +6,13 @@ const htmlmin = require('gulp-htmlmin');
 
 function server() {
     browserSync({server:{baseDir: "src"}});
-    browserSync.stream;
+    browserSync.stream();
     gulp.watch("src/*.html", reloading);
     }
-
 function reloading(done)
 {
     browserSync.reload();
-    console.log('\x1b[32m','Site reloaded')
+    console.log('\x1b[32m','Site reloaded');
     done();
 }
 
@@ -26,7 +25,7 @@ function styles(done)
         .pipe(gulp.dest('src/css/'))
         .pipe(browserSync.reload({
             stream: true
-          }))
+          }));
         done();
     gulp.src('src/sass/*sass')
         .pipe(sass({
@@ -74,10 +73,4 @@ gulp.task('images', function () {
         .pipe(gulp.dest("dist/img"))
         .pipe(browserSync.stream());
 });
-
-function print(done)
-{
-    console.log('\x1b[36m','SASS compiling started.');
-    done();
-}
 gulp.task('default', gulp.parallel('watch', server, styles, 'scripts', 'fonts', 'icons', 'html', 'images'));
